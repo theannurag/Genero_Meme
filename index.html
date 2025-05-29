@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Chat Generator</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="root"> 
+        <img id="meme" />
+        <button onclick ="fetchAPI()">Click here </button>
+    </div>
+    
+</body>
+<script>
+
+    function fetchAPI() {
+      fetch ("https://meme-api.com/gimme")
+    .then((data)  => {
+
+      if (!data.ok) throw new Error("not coming errors")
+      return data.json();
+    })
+    .then ((data) => {
+  const imageElement = document.getElementById("meme")
+  imageElement.setAttribute("src",data.url)
+    })
+    .catch((error) =>{
+      fetchAPI();
+    });
+}
+fetchAPI();
+</script>
+</html>

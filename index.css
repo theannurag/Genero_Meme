@@ -1,0 +1,26 @@
+body {
+    background-image:url('img4.jpg');
+   
+
+}
+#root {
+    button{
+        font-size:15px;
+       padding: 10px 8px;
+       margin-top:20px;
+background: linear-gradient(109.6deg, rgb(255, 230, 109) 11.2%, rgb(87, 232, 107) 100.2%);;
+     color:blueviolet;
+     cursor:pointer;
+     border-radius:5px;
+    }
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+   height:60vh;
+   
+}
+
+#meme{
+    height : 500px;
+}
